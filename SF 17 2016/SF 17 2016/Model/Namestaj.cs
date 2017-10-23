@@ -16,5 +16,11 @@ namespace SF_17_2016.Model
         public int Kolicina { get; set; }
         public TipNamestaja TipNamestaja { get; set; }
         public Akcija Akcija { get; set; }
+        public static int Count { get; internal set; }
+
+        internal static void Add(Namestaj noviNamestaj)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

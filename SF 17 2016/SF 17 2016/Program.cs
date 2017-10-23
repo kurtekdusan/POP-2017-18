@@ -12,12 +12,8 @@ namespace SF_17_2016
     {
         static List<Namestaj> Namestaj { get; set; } = new List<Namestaj>();
 
-        public static string Adresa { get; private set; }
-        public static string Brojziroracuna { get; private set; }
-        public static string Email { get; private set; }
-        public static string Naziv { get; private set; }
-        public static object PIB { get; private set; }
-        public static int Id { get; private set; }
+        static List<TipNamestaja> TipNamestaja { get; set; } = new List<TipNamestaja>();
+
 
         static void Main(string[] args)
         {
@@ -32,25 +28,31 @@ namespace SF_17_2016
                 PIB = 88787,
                 Telefon = "065-656565",
                 Website = "google.com",
-                Namestaj = Namestaj.Add
+                //Namestaj.Add(n1)
             };
 
 
-        var tn1 = new TipNamestaja 
+            var tn1 = new TipNamestaja 
             { 
                 Id = 1,
                 Naziv = "sofica",
                 
             };
-    var n1 = new Namestaj()
-    {
-        Id = 1,
-        Naziv = "sof",
-        Sifra = "SF1",
-        Cena = 28,
-        TipNamestaja = tn1,
-        Kolicina = 2
-    };
+            var n1 = new Namestaj()
+            {
+                Id = 1,
+                Naziv = "sof",
+                Sifra = "SF1",
+                Cena = 28,
+                TipNamestaja = tn1,
+                Kolicina = 2
+            };
+            var tn2 = new TipNamestaja
+            {
+                Id = 2,
+                Naziv = "novitip"
+            };
+
     Console.WriteLine($"==== Dobrodosli u salon {s1.Naziv}");
 
 
@@ -119,6 +121,9 @@ namespace SF_17_2016
                 case 2:
                     DodajNamestaj();
                     break;
+                case 3:
+                    IzmeniNamestaj();
+                    break;
                 
             default:
                 break;
@@ -130,7 +135,10 @@ namespace SF_17_2016
             Console.WriteLine("=== Izlistavanje namestaja===");
             for (int i = 0; i < Namestaj.Count; ++i )
             {
-                Console.WriteLine($"{ i + 1 }. {Namestaj[i].Naziv}, cena: {Namestaj[i].Cena}");
+                if(!Namestaj[i].Obrisan)
+                {
+                    Console.WriteLine($"{ i + 1 }. {Namestaj[i].Naziv}, cena: {Namestaj[i].Cena}, tip namestaja: {Namestaj[i].TipNamestaja.Naziv}");
+                }
 
             }
             IspisiMeniNamestaja();
@@ -139,9 +147,75 @@ namespace SF_17_2016
 
         private static void DodajNamestaj()
         {
-            Console.WriteLine("Dodajte namestaj");
+
+            Console.WriteLine("Dodavanje namestaja");
+            var NoviNamestaj = new Namestaj();
+            NoviNamestaj.Id = Namestaj.Count + 1;
+            //NoviNamestaj.Id = NoviNamestaj.GetHashCode();
+            Console.WriteLine("Naziv: ");
+            NoviNamestaj.Naziv = Console.ReadLine();
+            Console.WriteLine("Cena: ");
+            NoviNamestaj.Cena = double.Parse(Console.ReadLine());
+            Console.WriteLine("Sifra: ");
+            NoviNamestaj.Sifra = Console.ReadLine();
+            string nazivTipaNamestaja = "";
+            TipNamestaja trazeniTipNamestaja = null;
+
+            do
+            {
+                Console.WriteLine("Tip Namestaja: ");
+                string nazivTipaNamestaj = Console.ReadLine();
+
+                foreach (var TipNamestaja in TipoviNamestaja)
+                {
+                    if(TipNamestaja.Naziv = nazivTipaNamestaja)
+                    {
+                        trazeniTipNamestaja = TipNamestaja;
+                    }
+                }
+            } while (trazeniTipNamestaja == null);
+            NoviNamestaj.TipNamestaja = trazeniTipNamestaja;
+
+            Console.WriteLine("Kolicina: ");
+            NoviNamestaj.Kolicina = int.Parse(Console.ReadLine());
+
+            Namestaj.Add(NoviNamestaj);
+
+
+            
+
         }
-      
+
+        private static IzmeniNamestaj()
+        {
+            Namestaj TrazeniNamestaj = null;
+            string nazivTrazenogNamestaja = "";
+
+            do
+            {
+                Console.WriteLine("unesi naziv: ");
+                nazivTrazenogNamestaja = Console.ReadLine();
+                foreach (var namestaj in Namestaj)
+                {
+                    if(namestaj.Naziv = nazivTrazenogNamestaja)
+                    {
+                        TrazeniNamestaj = namestaj;
+                    }
+                }
+           
+
+            } while (TrazeniNamestaj == null);
+
+            Console.WriteLine("Unesi novi naziv");
+            TrazeniNamestaj.Naziv = Console.ReadLine();
+
+            Console.WriteLine("unesi novu cenu ");
+            TrazeniNamestaj.Cena = double.Parse(Console.ReadLine());
+
+            //implementiraj izmenu tipa sadrzaja
+            
+        }
+
 
 
     }
