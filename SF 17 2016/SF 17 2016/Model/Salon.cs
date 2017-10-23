@@ -18,5 +18,6 @@ namespace SF_17_2016.Model
         public int MaticniBrojRacuna { get; set; }
         public string BrojZiroRacuna { get; set; }
         public bool Obrisan { get; set; }
+        internal Action<Namestaj> Namestaj { get; set; }
     }
 }

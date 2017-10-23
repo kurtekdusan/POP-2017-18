@@ -4,3 +4,9 @@ C:\SF-17-2016\POP 2017_18\POP-2017-18\SF 17 2016\SF 17 2016\bin\Debug\SF 17 2016
 C:\SF-17-2016\POP 2017_18\POP-2017-18\SF 17 2016\SF 17 2016\obj\Debug\SF 17 2016.csprojResolveAssemblyReference.cache
 C:\SF-17-2016\POP 2017_18\POP-2017-18\SF 17 2016\SF 17 2016\obj\Debug\SF 17 2016.exe
 C:\SF-17-2016\POP 2017_18\POP-2017-18\SF 17 2016\SF 17 2016\obj\Debug\SF 17 2016.pdb
+C:\Users\sf17-2016\Desktop\pop\POP-2017-18\SF 17 2016\SF 17 2016\bin\Debug\SF 17 2016.exe.config
+C:\Users\sf17-2016\Desktop\pop\POP-2017-18\SF 17 2016\SF 17 2016\obj\Debug\SF 17 2016.exe
+C:\Users\sf17-2016\Desktop\pop\POP-2017-18\SF 17 2016\SF 17 2016\obj\Debug\SF 17 2016.pdb
+C:\Users\sf17-2016\Desktop\pop\POP-2017-18\SF 17 2016\SF 17 2016\obj\Debug\SF 17 2016.csprojResolveAssemblyReference.cache
+C:\Users\sf17-2016\Desktop\pop\POP-2017-18\SF 17 2016\SF 17 2016\bin\Debug\SF 17 2016.exe
+C:\Users\sf17-2016\Desktop\pop\POP-2017-18\SF 17 2016\SF 17 2016\bin\Debug\SF 17 2016.pdb

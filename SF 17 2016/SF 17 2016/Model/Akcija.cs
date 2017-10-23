@@ -11,6 +11,7 @@ namespace SF_17_2016.Model
         public int Id { get; set; }
         public DateTime Pocetak { get; set; }
         public DateTime Zavrsetak { get; set; }
+        public decimal Popust { get; set; }
         public bool Obrisan { get; set; }
         public double ProcenatPopusta { get; set; }
     }
