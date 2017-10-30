@@ -28,14 +28,14 @@ namespace SF_17_2016
                 PIB = 88787,
                 Telefon = "065-656565",
                 Website = "google.com",
-                //Namestaj.Add(n1)
+                
             };
 
 
             var tn1 = new TipNamestaja 
             { 
                 Id = 1,
-                Naziv = "sofica",
+                Naziv = "sofica"
                 
             };
             var n1 = new Namestaj()
@@ -52,16 +52,14 @@ namespace SF_17_2016
                 Id = 2,
                 Naziv = "novitip"
             };
+            Namestaj.Add(n1);
+
 
     Console.WriteLine($"==== Dobrodosli u salon {s1.Naziv}");
 
 
     IspisGlavnogMenia();            
-
-
-
-
-
+            
     }
         private static void IspisGlavnogMenia()
         {
@@ -124,6 +122,9 @@ namespace SF_17_2016
                 case 3:
                     IzmeniNamestaj();
                     break;
+                case 4:
+                    Izbrisi();
+                    break;
                 
             default:
                 break;
@@ -166,11 +167,11 @@ namespace SF_17_2016
                 Console.WriteLine("Tip Namestaja: ");
                 string nazivTipaNamestaj = Console.ReadLine();
 
-                foreach (var TipNamestaja in TipoviNamestaja)
+                foreach (var tipNamestaja in TipNamestaja)
                 {
-                    if(TipNamestaja.Naziv = nazivTipaNamestaja)
+                    if(tipNamestaja.Naziv == nazivTipaNamestaja)
                     {
-                        trazeniTipNamestaja = TipNamestaja;
+                        trazeniTipNamestaja = tipNamestaja;
                     }
                 }
             } while (trazeniTipNamestaja == null);
@@ -186,7 +187,7 @@ namespace SF_17_2016
 
         }
 
-        private static IzmeniNamestaj()
+        private static void IzmeniNamestaj()
         {
             Namestaj TrazeniNamestaj = null;
             string nazivTrazenogNamestaja = "";
@@ -196,8 +197,8 @@ namespace SF_17_2016
                 Console.WriteLine("unesi naziv: ");
                 nazivTrazenogNamestaja = Console.ReadLine();
                 foreach (var namestaj in Namestaj)
-                {
-                    if(namestaj.Naziv = nazivTrazenogNamestaja)
+                { 
+                    if(namestaj.Naziv == nazivTrazenogNamestaja)
                     {
                         TrazeniNamestaj = namestaj;
                     }
@@ -212,11 +213,29 @@ namespace SF_17_2016
             Console.WriteLine("unesi novu cenu ");
             TrazeniNamestaj.Cena = double.Parse(Console.ReadLine());
 
-            //implementiraj izmenu tipa sadrzaja
-            
+            //implementiraj izmenu tipa sadrzaja 
         }
 
+        private static void Izbrisi()
+        {
+            Namestaj TrazeniNamestaj = null;
+            string nazivTrazenogNamestaja = "";
 
+            do
+            {
+                Console.WriteLine("unesi naziv: ");
+                nazivTrazenogNamestaja = Console.ReadLine();
+                foreach (var namestaj in Namestaj)
+                {
+                    if (namestaj.Naziv == nazivTrazenogNamestaja)
+                    {
+                        namestaj.Obrisan = true;
+                    }
+                }
+
+
+            } while (TrazeniNamestaj == null);
+        }
 
     }
 }

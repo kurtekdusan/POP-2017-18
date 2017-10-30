@@ -10,3 +10,9 @@ C:\Users\sf17-2016\Desktop\pop\POP-2017-18\SF 17 2016\SF 17 2016\obj\Debug\SF 17
 C:\Users\sf17-2016\Desktop\pop\POP-2017-18\SF 17 2016\SF 17 2016\obj\Debug\SF 17 2016.csprojResolveAssemblyReference.cache
 C:\Users\sf17-2016\Desktop\pop\POP-2017-18\SF 17 2016\SF 17 2016\bin\Debug\SF 17 2016.exe
 C:\Users\sf17-2016\Desktop\pop\POP-2017-18\SF 17 2016\SF 17 2016\bin\Debug\SF 17 2016.pdb
+D:\Skola\3 Treci semestar\Platforme\Projekat\SF 17 2016\SF 17 2016\bin\Debug\SF 17 2016.exe.config
+D:\Skola\3 Treci semestar\Platforme\Projekat\SF 17 2016\SF 17 2016\obj\Debug\SF 17 2016.exe
+D:\Skola\3 Treci semestar\Platforme\Projekat\SF 17 2016\SF 17 2016\obj\Debug\SF 17 2016.pdb
+D:\Skola\3 Treci semestar\Platforme\Projekat\SF 17 2016\SF 17 2016\obj\Debug\SF 17 2016.csprojResolveAssemblyReference.cache
+D:\Skola\3 Treci semestar\Platforme\Projekat\SF 17 2016\SF 17 2016\bin\Debug\SF 17 2016.exe
+D:\Skola\3 Treci semestar\Platforme\Projekat\SF 17 2016\SF 17 2016\bin\Debug\SF 17 2016.pdb
